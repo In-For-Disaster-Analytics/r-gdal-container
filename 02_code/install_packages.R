@@ -6,7 +6,7 @@ install.load.package <- function(x){
 package_vec <- c("tidyr", "ggplot2", "viridis", "cowplot", "ggmap", "gimms", "rnaturalearth", "rnaturalearthdata", 
                  "mapview", "rosm", "ncdf4", "raster","rgdal", "tindync", "parallel","rgeos","sf","terra","libsecret-1-dev", "libunits-dev"
                  )
-SuppressMessages({SupressWarnings({sapply(package_vec, install.load.package)})})
+sapply(package_vec, install.load.package)
 
 Sys.setenv(R_REMOTES_NO_ERRORS_FROM_WARNINGS = "true")
 install.packages('https://cran.r-project.org/src/contrib/rosm_0.3.0.tar.gz', dependencies = TRUE, repos = NULL, type="source")
